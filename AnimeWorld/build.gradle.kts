@@ -2,7 +2,7 @@ version = 6
 
 
 cloudstream {
-    language = "hi"
+    language = "en"
     // All of these properties are optional, you can safely remove them
 
     description = "Anime/Cartoon in Hindi"
