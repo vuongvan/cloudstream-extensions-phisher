@@ -1,12 +1,17 @@
-package com.phisher98
+package com.cloudstream
 
-import com.lagradost.cloudstream3.plugins.BasePlugin
 import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
+import com.lagradost.cloudstream3.plugins.Plugin
+import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
 
 @CloudstreamPlugin
-class IPTVPlayerPlugin: BasePlugin() {
-    override fun load() {
-        // All providers should be added in this manner. Please don't edit the providers list directly.
-        registerMainAPI(IPTVPlayer())
+class KKPhimPlugin: Plugin() {
+    var activity: AppCompatActivity? = null
+
+    override fun load(context: Context) {
+        activity = context as AppCompatActivity
+        // All providers should be added in this manner
+        registerMainAPI(KKPhimProvider(this))
     }
 }
